@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple starter online shop website.">
+  <title>My Shop | Online Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="My Shop home">My<span>Shop</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="cart-toggle" aria-label="Open shopping cart">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO MY SHOP</p>
+        <h1>Find something<br><span>you’ll love.</span></h1>
+        <p>Discover our hand-picked collection. This is your new online store starter website.</p>
+        <a class="primary-button" href="#products">Shop now</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span>✦</span><strong>GOOD<br>THINGS<br>INSIDE</strong></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">OUR COLLECTION</p><h2>Popular products</h2></div>
+        <label class="search-wrap">
+          <span class="sr-only">Search products</span>
+          <input id="search" type="search" placeholder="Search products...">
+        </label>
+      </div>
+      <div class="category-row" id="categories">
+        <button class="category active" data-category="All">All</button>
+        <button class="category" data-category="Fashion">Fashion</button>
+        <button class="category" data-category="Accessories">Accessories</button>
+        <button class="category" data-category="Lifestyle">Lifestyle</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <p class="eyebrow">A LITTLE ABOUT US</p>
+      <h2>A simple shop with<br>great finds.</h2>
+      <p>Replace this text with your shop story, what you sell, and what makes your store special.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div><a class="logo" href="#">My<span>Shop</span></a><p>Thanks for visiting our store.</p></div>
+    <div><strong>Contact</strong><p>hello@example.com</p><p>Instagram: @yourshop</p></div>
+    <small>© <span id="year"></span> MyShop. Demo starter website.</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-heading"><h2>Your cart</h2><button id="cart-close" class="icon-button" aria-label="Close cart">✕</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">Your cart is empty.</p></div>
+    <div class="cart-footer">
+      <div class="total-line"><strong>Total</strong><strong id="cart-total">₹0</strong></div>
+      <button class="primary-button checkout-button" id="checkout-button">Continue</button>
+      <p class="cart-note">Demo only: checkout and online payments are not connected.</p>
+    </div>
+  </aside>
+</body>
+</html>
